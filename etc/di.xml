@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Magento\Catalog\Helper\Category">
+        <plugin name="arcmedia_replace_url" type="\Arcmedia\CategoryRedirect\Plugin\CategoryRedirectUrl" sortOrder="1"/>
+    </type>
+
+    <type name="\Magento\Catalog\Observer\MenuCategoryData">
+        <plugin name="arcmedia_mark_active_redirectUrl" type="\Arcmedia\CategoryRedirect\Plugin\ActiveCategoryRedirectUrl" sortOrder="1"/>
+    </type>
+</config>
